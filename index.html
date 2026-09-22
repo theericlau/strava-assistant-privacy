@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Strava Assistant</title>
+<meta name="description" content="Privacy policy for the Strava Assistant Chrome extension." />
+<style>
+  :root {
+    color-scheme: light dark;
+    --ink: #1b1b1b; --muted: #5f5b59; --accent: #eb492a;
+    --bg: #fff; --panel: #fdf6f4; --line: #e6e2e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#eceaea; --muted:#a6a19e; --bg:#161514; --panel:#201d1c; --line:#33302e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 20px 80px; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  .summary {
+    background: var(--panel); border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 16px 18px; margin: 0 0 34px; font-weight: 500;
+  }
+  h2 { font-size: 20px; margin: 36px 0 10px; }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  code {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+    padding: 1px 5px; font-size: 14px;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy — Strava Assistant</h1>
+  <p class="updated">Last updated: 22 September 2026</p>
+
+  <p class="summary">
+    Strava Assistant does not send your data anywhere. There are no servers, no accounts,
+    no analytics, and no third parties. Everything happens inside your browser.
+  </p>
+
+  <h2>What the extension handles</h2>
+  <p>
+    Google asks developers to disclose data handling even when it is entirely local and
+    nothing is transmitted. Three things are handled locally.
+  </p>
+
+  <h3>1. Page content on strava.com</h3>
+  <p>
+    To do its job the extension reads the Strava feed in the page: which kudos buttons
+    exist, whether each has already received a kudos from you, which athlete each belongs
+    to, and whether an entry is an activity, a personal post or a club post. This is read
+    from the page you are already looking at, held in memory for the length of the run,
+    and discarded. It is never written to disk and never leaves your browser.
+  </p>
+
+  <h3>2. Network response status on strava.com</h3>
+  <p>
+    The extension observes the HTTP status codes of requests the Strava page itself makes,
+    so that a rate-limit response (HTTP 429) pauses the run instead of continuing to click.
+    Only the status code, the URL path and the <code>Retry-After</code> header are read.
+    Request and response bodies are never read. This is held transiently in memory and
+    never stored or transmitted.
+  </p>
+
+  <h3>3. Settings you enter</h3>
+  <p>
+    The choices you make in the extension's popup — which entry types to include, your skip
+    list, the dry-run toggle, and the timing values — are saved with
+    <code>chrome.storage.local</code> so they persist between sessions. They stay in your
+    Chrome profile on your device.
+  </p>
+
+  <h2>What the extension does not do</h2>
+  <ul>
+    <li>It does not transmit any data anywhere. The extension makes no network requests of its own.</li>
+    <li>It has no server, no backend, and no account system.</li>
+    <li>It contains no analytics, telemetry, crash reporting, or advertising.</li>
+    <li>It does not sell, rent, or share data with anyone, because it has no data to share.</li>
+    <li>It does not read or run on any site other than <code>https://www.strava.com/*</code>.</li>
+    <li>It does not touch passwords, cookies, payment details, or your Strava credentials.</li>
+    <li>It does not read your browsing history or your activity in other tabs.</li>
+  </ul>
+
+  <h2>Where data is stored and how to delete it</h2>
+  <p>
+    Settings live in <code>chrome.storage.local</code>, part of your local Chrome profile.
+    Uninstalling the extension removes them. You can also clear them at any time through
+    Chrome's settings.
+  </p>
+
+  <h2>Permissions and why they exist</h2>
+  <ul>
+    <li><code>storage</code> — to remember your settings between sessions. Nothing else is stored.</li>
+    <li><code>https://www.strava.com/*</code> — the extension's entire function is performed
+        on the Strava feed. It runs nowhere else.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The extension is not directed at children and collects nothing from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes, the updated version will be posted at this URL with a new date
+    at the top.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <strong>&lt;your contact email&gt;</strong></p>
+
+  <footer>Privacy policy for the Strava Assistant Chrome extension.</footer>
+</main>
+</body>
+</html>
